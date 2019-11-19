@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+    font-size: 3.6rem;
+    max-width: 110rem;
+}
+.row{
+    display:flex;
+    border: 1px black solid;
+    min-height: 10rem;
+}
+.row > * {
+    border: 1px black solid;
+}
+.hour {
+    min-width: 20%;
+}
+.content {
+    min-width: 70%;
+}
+.btn {
+    min-width: 10%;
+}
+.past {
+    background-color: lightslategray;
+}
+.current {
+    background-color: orange;
+}
+textarea{
+    min-height: 10rem;
+    font-size: 5.6rem;
+}
+
