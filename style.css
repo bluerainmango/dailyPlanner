@@ -59,6 +59,7 @@ main{
     display:flex;
     /* border: 1px black solid; */
     min-height: 8rem;
+    
 }
 .row > * {
     /* border: 1px black solid; */
@@ -79,18 +80,53 @@ main{
     background-color: #c6ebfa;
     border: #fff .5px solid;
 }
-.btn {
+.btn,
+.btn:visited
+{
     min-width: 7%;
-    border: #fff .5px solid;
+    /* border: #fff .5px solid; */
+    border: none;
+    /* margin-left: -1px;
+    margin-top: 1px; */
+    margin: 1px;
     /* background-image: linear-gradient(to right bottom, #56CCF2,#2F80ED); */
-    background-color: #2F80ED;
+    /* background-color: #2F80ED; */
     cursor: pointer;
     border-top-right-radius: 30%;
-    border-bottom-right-radius: 30%;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
     /* backface-visibility: hidden; */
-    overflow: hidden;
+    /* overflow: hidden; */
     /* color: #3498db; */
     color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589);
+    background-image: linear-gradient(to right bottom,#2F80ED,rgb(0, 79, 182) );
+    /* background-image: linear-gradient(to right bottom,rgb(0, 79, 182),#2F80ED ); */
+    position: relative;
+}
+.btn:hover{
+    transform: translateY(-.2rem);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+    background-image: linear-gradient(to right bottom,rgb(0, 238, 255),rgb(0, 110, 255) );
+    margin-left: -2px;
+}
+.btn:active {
+    transform: translateY(0rem);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.589);
+    
+}
+.pop::after{
+    content: "saved!";
+    font-size: 1.6rem;
+    width: 65px;
+    height: 50px;
+    background-color: orange;
+    position: absolute;
+    padding: 1.1rem;
+    left: 7rem;
+    top: -3rem;
+    -webkit-clip-path: polygon(11% 14%, 100% 0%, 100% 75%, 75% 75%, 42% 100%, 50% 75%, 0 66%);
+    clip-path: polygon(11% 14%, 100% 0%, 100% 75%, 75% 75%, 42% 100%, 50% 75%, 0 66%);
 }
 .past {
     background-color: rgb(170, 170, 170);

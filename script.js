@@ -1,7 +1,5 @@
 $('document').ready(function(){
 
-
-    
     var state = {
         startHour : null,
         currentHour: null,
@@ -59,8 +57,14 @@ $('.btn').click(function(e){
     console.log(hourForRecord, dataForRecord);
     
     localStorage.setItem(hourForRecord,dataForRecord);
-
+    renderSavedPop(this);
 })
+
+function renderSavedPop(clickedBtn){
+    $(clickedBtn).addClass('pop');
+    setTimeout( () => $(clickedBtn).removeClass('pop'),500 );
+}
+
 function init(){
     FromLocalStorage();
     state.startHour = moment().hour();
