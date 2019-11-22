@@ -1,5 +1,7 @@
 $('document').ready(function(){
 
+
+    
     var state = {
         startHour : null,
         currentHour: null,
@@ -28,6 +30,9 @@ function timeSensor(){
 }  
 
 function colorField(){
+
+    // previous current row's color change
+    $('[class *= "current"]').removeClass('current');
 
     $('.hour').each(function(){
        
