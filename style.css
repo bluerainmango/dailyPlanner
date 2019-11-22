@@ -5,39 +5,111 @@
     padding: 0;
     box-sizing: inherit;
 }
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 html{
     font-size: 62.5%;
 }
 body{
     box-sizing: border-box;
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     max-width: 110rem;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right bottom, #56CCF2,#2F80ED); */
+    background-image: url(./assets/bg.png);
+
+    /* background-size: cover; */
+
+}
+header{
+    text-align: center;
+    height: 20rem;
+    padding: 2rem;
+    line-height: 1.75;
+    /* background-color: white; */
+}
+h1{
+    text-transform: uppercase;
+    font-weight: 300;
+    background-image: linear-gradient(to right, #56CCF2,#2F80ED);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+}
+.header__sub{
+    font-size: 2rem;
+    
+}
+#currentTime{
+    color: rgb(124, 124, 124);
+    position: relative;
+    font-size: 2rem;
+}
+
+main{
+    /* background-color: #fff; */
 }
 .row{
     display:flex;
-    border: 1px black solid;
-    min-height: 10rem;
+    /* border: 1px black solid; */
+    min-height: 8rem;
 }
 .row > * {
-    border: 1px black solid;
+    /* border: 1px black solid; */
+
 }
 .hour {
-    min-width: 20%;
+    min-width: 10%;
+    text-align: right;
+    padding-right: 2rem;
+    padding-top: .5rem;
+    border-top:  rgb(0, 68, 255) 1px dashed;
+    color: #229fff;
+    font-size: 1.6rem;
 }
 .content {
-    min-width: 70%;
+    min-width: 80%;
+    padding: .5rem;
+    background-color: #c6ebfa;
+    border: #fff .5px solid;
 }
 .btn {
-    min-width: 10%;
+    min-width: 7%;
+    border: #fff .5px solid;
+    /* background-image: linear-gradient(to right bottom, #56CCF2,#2F80ED); */
+    background-color: #2F80ED;
+    cursor: pointer;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    /* backface-visibility: hidden; */
+    overflow: hidden;
+    /* color: #3498db; */
+    color: #fff;
 }
 .past {
-    background-color: lightslategray;
+    background-color: rgb(170, 170, 170);
 }
 .current {
-    background-color: orange;
+    background-color: #2F80ED;
+    color: #fff;
+    
 }
 textarea{
-    min-height: 10rem;
-    font-size: 5.6rem;
+    min-height: 8rem;
+    font-size: 1.6rem;
+    outline-width: ;
 }
-
+.icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
