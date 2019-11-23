@@ -31,7 +31,7 @@ header{
 h1{
     text-transform: uppercase;
     font-weight: 300;
-    background-image: linear-gradient(to right, #56CCF2,#2F80ED);
+    background-image: linear-gradient(to right, rgb(139, 238, 255),rgb(0, 153, 255),rgb(0, 1, 2));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
