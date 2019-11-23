@@ -98,22 +98,17 @@ function init(){
 
 
 // Button event 
-$('main').click(function(e){
+$('main').on('click', 'button, botton *', function(e){
 
-    if(e.target.matches('button, button *')){
-        
-        var button = $(e.target).closest('button');
+    // Get hour & textarea data then save to localStorage
+        var clickedButton = $(e.target).closest('button');
 
-        // Get hour & data then save to localStorage
-        var hourForRecord = button.siblings('.hour').attr('data-hour'); // 10
-        var dataForRecord = button.siblings('.content').val().trim();
+        var hourForRecord = clickedButton.siblings('.hour').attr('data-hour'); 
+        var dataForRecord = clickedButton.siblings('.content').val().trim();
 
-        if(dataForRecord){
-            localStorage.setItem(hourForRecord,dataForRecord);
-            renderSavedPop(button);
-        }
-    }
-   
+        localStorage.setItem(hourForRecord, dataForRecord);
+        renderSavedPop(clickedButton);
+
 })
 
 init();
