@@ -3,7 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: inherit; /* to auto apply 'border-box' to input, button etc */
 }
 input:focus,
 textarea:focus,
@@ -11,27 +11,22 @@ button:focus {
     outline: none;
 }
 html{
-    font-size: 62.5%;
+    font-size: 62.5%; /* 10px */
 }
 body{
     box-sizing: border-box;
     font-size: 1.6rem;
-    max-width: 110rem;
-    margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    /* background-image: linear-gradient(to right bottom, #56CCF2,#2F80ED); */
     background-image: url(./assets/bg.png);
-
-    /* background-size: cover; */
-
 }
+/**************************************/
+/*                HEADER              */
+/**************************************/
 header{
     text-align: center;
-    height: 20rem;
     padding: 2rem;
     line-height: 1.75;
-    /* background-color: white; */
 }
 h1{
     text-transform: uppercase;
@@ -44,29 +39,26 @@ h1{
 }
 .header__sub{
     font-size: 2rem;
-    
 }
 #currentTime{
-    color: rgb(124, 124, 124);
+    color: rgb(255, 136, 0);
     position: relative;
     font-size: 2rem;
 }
-
+/**************************************/
+/*                MAIN              */
+/**************************************/
 main{
-    /* background-color: #fff; */
+    max-width: 110rem;
+    margin: 0 auto;
 }
 .row{
     display:flex;
-    /* border: 1px black solid; */
     min-height: 8rem;
-    
-}
-.row > * {
-    /* border: 1px black solid; */
-
+    width: 100%;
 }
 .hour {
-    min-width: 10%;
+    width: 10%;
     text-align: right;
     padding-right: 2rem;
     padding-top: .5rem;
@@ -75,33 +67,26 @@ main{
     font-size: 1.6rem;
 }
 .content {
-    min-width: 80%;
+    width: 100%;
+    min-height: 8rem;
     padding: .5rem;
     background-color: #c6ebfa;
     border: #fff .5px solid;
+    font-size: 1.6rem;
 }
 .btn,
 .btn:visited
 {
-    min-width: 7%;
-    /* border: #fff .5px solid; */
+    width: 9rem;
     border: none;
-    /* margin-left: -1px;
-    margin-top: 1px; */
     margin: 1px;
-    /* background-image: linear-gradient(to right bottom, #56CCF2,#2F80ED); */
-    /* background-color: #2F80ED; */
     cursor: pointer;
     border-top-right-radius: 30%;
     border-bottom-right-radius: 20%;
     border-bottom-left-radius: 20%;
-    /* backface-visibility: hidden; */
-    /* overflow: hidden; */
-    /* color: #3498db; */
     color: #fff;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589);
     background-image: linear-gradient(to right bottom,#2F80ED,rgb(0, 79, 182) );
-    /* background-image: linear-gradient(to right bottom,rgb(0, 79, 182),#2F80ED ); */
     position: relative;
 }
 .btn:hover{
@@ -112,8 +97,7 @@ main{
 }
 .btn:active {
     transform: translateY(0rem);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.589);
-    
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.589);  
 }
 .pop::after{
     content: "saved!";
@@ -129,17 +113,13 @@ main{
     clip-path: polygon(11% 14%, 100% 0%, 100% 75%, 75% 75%, 42% 100%, 50% 75%, 0 66%);
 }
 .past {
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(185, 185, 185);
+    color: white;
 }
 .current {
     background-color: #2F80ED;
-    color: #fff;
-    
-}
-textarea{
-    min-height: 8rem;
-    font-size: 1.6rem;
-    outline-width: ;
+    color: rgb(255, 251, 0);
+    font-weight: bolder;
 }
 .icon {
     display: inline-block;
@@ -149,3 +129,58 @@ textarea{
     stroke: currentColor;
     fill: currentColor;
   }
+
+/**************************************/
+/*            RESPONSIVE              */
+/**************************************/
+@media screen and ( max-width: 1250px ){
+    .hour{
+        padding-right: .5rem;
+        padding-top: .5rem;
+    }
+    .pop::after{
+        top: -5rem;
+        left: -1rem;
+    }
+}
+@media screen and ( max-width: 671px ){
+    header{
+        line-height: 1.25;
+    }
+    .row{
+        font-size: 1.2rem;
+    }
+    .hour{
+        padding: .5rem 0 0 .2rem;
+        width: 8rem;
+    }
+   
+}
+@media screen and ( max-width: 520px ){
+    h1{
+        font-size: 3rem;
+    }
+    .header__sub,
+    #currentTime {
+        font-size: 1.7rem;
+    }
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hour {
+        width: 100%;
+        text-align: center;
+    }
+    .btn{
+        width: 100%;
+        border-radius: initial;
+        padding: 1rem 0;
+    }
+    .pop::after{
+        left: 30rem;
+    }
+    .btn p {
+        display: none;
+    }
+}
