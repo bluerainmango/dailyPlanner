@@ -11,4 +11,4 @@ Employees can see their daily works at a glance and prioritize it so that work p
 - Content fields automatically change their background colors according to the current time.
 
 ## ✨Demo
-
+![demo gif] (./assets/demo.gif)
