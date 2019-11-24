@@ -1,5 +1,6 @@
 # Daily Work Scheduler
 > Manage your work quick & easy!
+🔗 https://bluerainmango.github.io/dailyPlanner/
 
 ## 📍Purpose
 Individuals can save to-do list so that they can effectively achive their hourly & daily goals. 🎯 <br>
